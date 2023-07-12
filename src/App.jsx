@@ -4,7 +4,7 @@ import Home from "./Pages/Home";
 import Dashboard from "./Pages/Dashboard";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={"/the-carbon-news/"}>
       <Routes>
         <Route path="/" element={<ShareLayout />}>
           <Route index element={<Home />} />
