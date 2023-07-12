@@ -1,0 +1,334 @@
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+body {
+  margin: 0 auto;
+}
+
+/* style navbar */
+
+.nav-center {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(223, 222, 222);
+  padding-bottom: 1rem;
+  /* box-shadow: 0 4px 6px 5px rgba(0, 0, 0, 0.1); */
+}
+.logo {
+  height: 100px;
+}
+.website-name {
+  color: rgb(140, 182, 168);
+}
+.toggle-btn {
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: rgb(140, 182, 168);
+  display: none;
+  cursor: pointer;
+}
+.nav-logo {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90vw;
+}
+.carbon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carbon-link svg {
+  font-size: 2rem;
+  color: rgb(140, 182, 168);
+  margin-right: 2rem;
+}
+.nav-button-container {
+  border-bottom: 1px solid rgb(223, 222, 222);
+}
+.carbon-link a {
+  text-decoration: none;
+  border: 1px solid rgb(140, 182, 168);
+  border-radius: 50px;
+  padding: 0.5rem;
+  background-color: rgb(140, 182, 168);
+  color: white;
+}
+.nav-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-btn {
+  height: 50px;
+  width: 200px;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  color: rgb(140, 182, 168);
+  font-weight: bold;
+  font-size: 1rem;
+}
+.nav-btn:hover {
+  background-color: rgb(140, 182, 168);
+  color: white;
+}
+.selected-btn {
+  background-color: rgb(140, 182, 168);
+  color: white;
+}
+.nav-btn svg {
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .toggle-btn {
+    display: block;
+  }
+  .nav-header {
+    display: block;
+  }
+  .nav-logo {
+    margin-bottom: 3rem;
+  }
+  .nav-button-container {
+    display: none;
+  }
+  .show-nav-btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0.5rem;
+    /* align-items: center; */
+    transition: 0.3s ease-in-out all;
+  }
+}
+
+/* style headlines */
+.headlines-section {
+  margin: 5rem 5rem;
+  display: relative;
+  border-top: 1px solid rgb(223, 222, 222);
+
+  padding-top: 5rem;
+  position: relative;
+}
+.slick-slide div {
+  margin: 0 1rem;
+}
+
+.headlines-img {
+  display: inline-block !important;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.headlines-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(185, 97, 64);
+  color: white;
+  padding: 0.5rem;
+}
+.headlines-story-link {
+  text-decoration: none;
+  color: rgb(47, 46, 46);
+}
+.headlines-story-link:hover {
+  font-weight: bold;
+}
+.slick-prev::before {
+  color: rgb(140, 182, 168) !important;
+  font-size: 1.5rem;
+}
+.slick-next::before {
+  color: rgb(140, 182, 168) !important;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 800px) {
+  .slick-slide img {
+    height: 230px;
+    width: 100% !important;
+  }
+  .slick-prev::before,
+  .slick-next::before {
+    display: none;
+  }
+}
+/* 
+style top stories */
+.top-stories {
+  margin: 3rem 5rem;
+  /* height: 60vh; */
+}
+.top-stories-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  column-gap: 2rem;
+}
+.support-stories {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.support-stories img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+.read-more {
+  text-decoration: none;
+  color: rgb(140, 182, 168);
+}
+.main-story img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  .top-stories-container {
+    grid-template-columns: 1fr;
+    row-gap: 2rem;
+  }
+  .support-stories img {
+    height: auto;
+  }
+  .main-story article {
+    border-bottom: 2px solid rgb(200, 134, 110);
+    padding-bottom: 1rem;
+  }
+  .support-stories article {
+    border-bottom: 1px solid rgb(223, 222, 222);
+    padding-bottom: 1rem;
+  }
+}
+
+/* style all articles */
+.all-articles {
+  padding: 0 5rem;
+  display: grid;
+  grid-template-columns: 3.5fr 1fr;
+}
+.news {
+  display: grid;
+  border-bottom: 1px solid rgb(223, 222, 222);
+  padding: 2rem 0;
+  grid-template-columns: 1.5fr 1fr;
+  column-gap: 2rem;
+}
+
+.news img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+.news-info h3 {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .all-articles {
+    grid-template-columns: 1fr;
+  }
+  .empty-div {
+    display: none;
+  }
+  .news {
+    grid-template-columns: 1fr;
+  }
+  .news-info h3 {
+    margin-top: 1rem;
+  }
+}
+
+/* style footer  */
+.footer-section {
+  display: flex;
+  justify-content: center;
+  column-gap: 10rem;
+  margin-top: 3rem;
+  padding: 2rem 5rem;
+  background-color: rgba(234, 250, 245, 0.334);
+}
+.footer-section div {
+  text-align: center;
+}
+.copyright {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: rgb(140, 182, 168);
+  color: white;
+  font-weight: bold;
+}
+.social-links svg {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: cadetblue;
+}
+.social-links svg:hover {
+  color: rgb(76, 118, 120);
+}
+
+/* dashboard page */
+
+.back-home {
+  padding: 0.5rem;
+  text-decoration: none;
+  border: 1px solid rgb(140, 182, 168);
+  border-radius: 50px;
+  color: white;
+  background-color: rgb(140, 182, 168);
+}
+.main-section {
+  margin: 0 5rem;
+}
+.intro {
+  margin: 5rem 0;
+  text-align: center;
+}
+.intro h2 {
+  color: rgb(140, 182, 168);
+}
+.chart {
+  width: 100%;
+  height: auto;
+}
+.main-chart {
+  margin: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: gray;
+  font-size: 1.1rem;
+}
+
+.dashboard {
+  margin: 5rem 0;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.dashboard article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+  .main-section {
+    margin: 0 2rem;
+  }
+}
